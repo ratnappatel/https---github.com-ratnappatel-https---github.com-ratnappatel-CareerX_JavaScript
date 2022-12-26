@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Loading Head section prior page is loading-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../02_Day2Javascript/HelloWorld1.js"></script>
+    <script >
+        function hello()
+        {
+                // alert box will not let js-engine to execute next line until its terminated..
+                alert("Hello n Welcome to the Script Programming");
+            // console.log("Hello n Welcome to the Script Programming");
+                var h=document.getElementById("heading").innerText;
+              alert("On Button Clicked : "+h);
+        }
+        </script>
+</head>
+<body>
+    <h1 id="heading">I am First Page to Carry JS-Script Code..</h1>
+    <input type="button" value="GetHeading" onclick="hello()">
+    <input type="button" value="Call External JS Function" onclick="externalJS()">
+
+   <!--  <script>
+        var h=document.getElementById("heading").innerText;
+        alert("From Second SCript Tag"+h);
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getConfirmation()
+        {
+            var flag=confirm("Are you Sure to add Dynamic Content?")
+            if(flag)
+                 document.getElementById("content").innerHTML="<h1>I am result of Confirmation From User</h1>";
+            //    document.write("<h1>I am result of Confirmation From User</h1>");
+            else
+                 document.getElementById("content").innerHTML="<p>User did not like dynamic content</p>";
+              //  document.write("")
+        }
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+    <p> Add Dynamic Content ? </p>
+    <input type="button" value="Add Content" onclick="getConfirmation()">
+</body>
+</html>
