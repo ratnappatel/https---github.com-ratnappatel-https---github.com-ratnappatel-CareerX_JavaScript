@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            border: 3px solid green
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Indian Snacks</h1>
+        <ul>
+            <li>Pani Puri</li>
+            <li>Dahi Papadi</li>
+            <li>Lachha Kachori</li>
+            <li>Bhel Puri</li>
+        </ul>
+        <div>
+            <h2>Special Indian Snacks</h2>
+            <ul>
+                <li>Chinese Bhel</li>
+                <li>Chilly Paneer</li>
+                <li>Harabhara Kebab</li>
+            </ul>
+        </div>
+    </div>
+    <input type="button" onclick="doThings()" value="Format List">
+    <script>
+        function doThings()
+        {
+            var result="";
+            
+            var elements=document.getElementsByTagName('li');
+            for(var i=0;i<elements.length;i++)
+            {
+                 result+=", "+elements[i].innerText;
+                 elements[i].style.borderColor="red";
+            }
+            alert(result);
+     }
+    </script>
+</body>
+</html>

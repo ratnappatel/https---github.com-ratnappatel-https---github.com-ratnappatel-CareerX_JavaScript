@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function removeLastChild()
+        {
+            const parent=document.getElementById('para');
+            parent.removeChild(parent.lastElementChild);
+        }
+        function removePara()
+        {
+            const parent=document.getElementById('para');
+            // Hard Coding id hence it will always remove only p3 paeagraph
+            const child=document.getElementById('p3');
+            //parent.removeChild(child);
+            child.remove();
+        }
+
+        function removeAnyPara(id)
+        {
+            // getting id passed dynamically
+            const p=document.getElementById(id);
+            p.remove();
+        }
+    </script>
+</head>
+<body>
+    <div id="para">
+        <p id="p1" onclick="removeAnyPara('p1')">Paragraph 1 </p>
+        <p id="p2" onclick="removeAnyPara('p2')">Paragraph 2 </p>
+        <p id="p3" onclick="removeAnyPara('p3')">Paragraph 3 </p>
+        <p id="p4" onclick="removeAnyPara('p4')">Paragraph 4 </p>
+        <p id="p5" onclick="removeAnyPara('p5')">Paragraph 5 </p>
+    </div> 
+    <input type="button" value="Remove Paragraph" onclick="removePara()">
+    <input type="button" value="Remove Last Paragraph" onclick="removeLastChild()">
+</body>
+</html>

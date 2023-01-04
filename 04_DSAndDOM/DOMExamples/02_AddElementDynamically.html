@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addPara()
+        {
+            var p=document.createElement('p');
+            var text=document.createTextNode('This is new Paragraph');
+            p.appendChild(text);
+            var d=document.getElementById('para');
+            d.appendChild(p);
+
+        }
+        function addHeading()
+        {
+            var h=document.createElement('h1');
+            var text=document.createTextNode('This is new Heading');
+            h.appendChild(text);
+            var d=document.getElementById('heading');
+            d.appendChild(h);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Let's Experience Dynamic Element Addition to WebPage</h1>
+        <input type="button" value="Add Paragraph" onclick="addPara()">
+       
+        <div id="para" style="border:2px solid red; height:300; width:300 "></div>
+        <input type="button" value="Add Heading" onclick="addHeading()">
+        <div id="heading" style="border: 2px dashed blueviolet"></div>
+    </div>
+</body>
+</html>
