@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function typing()
+        {
+            var div=document.getElementById('msg');
+            div.innerHTML=div.innerHTML+"<br>typing.....";
+        }
+        function done()
+        {
+            var div=document.getElementById('msg');
+            div.innerHTML=div.innerHTML+"<br>Done......";
+        }
+    </script>
+</head>
+<body>
+    <!-- localhost:8800/authenticate?name=Ratna&password=Ratna@123-->
+    <form method="post" action="http://localhost:8800/authenticate">
+        Enter Your Name:
+        <input type="text" name="username" onkeydown="typing()" onkeyup="done()"><br>
+        Enter Your Password: 
+        <input type="password" id ="password"  onfocus="typing()" onblur="done()" name="password"><br>
+        Select Gender<input type="radio" checked value="Female" name="gender">Female
+        <input type="radio" value="male" name="gender">Male
+        <input type="submit" value="Login"> &nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Clear Form">
+       
+    </form>
+    <div id="msg" style="border:2px solid blue" width="150" height="150">
+        Key Events Message:
+
+    </div>
+</body>
+</html>

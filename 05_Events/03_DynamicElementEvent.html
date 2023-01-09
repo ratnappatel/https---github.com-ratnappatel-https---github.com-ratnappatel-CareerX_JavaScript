@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function generateHeading()
+        {
+            const h=document.createElement('h1');
+            const text=document.createTextNode('Click Me to Close');
+            var div=document.getElementById('space');
+
+            h.appendChild(text);
+            /* h.on("click",function(){
+                h.remove();
+            }) */
+            div.appendChild(h);
+        }
+    </script>
+</head>
+<body>
+    <div id="space" width="300" height="300" style="border:2px dashed pink">
+
+    </div>
+    <input type="button" onclick="generateHeading()" value="add h1">
+</body>
+</html>
