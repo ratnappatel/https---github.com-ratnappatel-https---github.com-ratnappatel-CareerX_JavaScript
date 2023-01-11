@@ -1,0 +1,20 @@
+[
+    {
+        "id":101,
+        "title":"Product -1 ",
+        "price": 234.45,
+        "rating": 3.5        
+    },
+    {
+        "id":102,
+        "title":"Product - 2 ",
+        "price": 7456.23,
+        "rating": 4.5 
+    },
+    {
+        "id":103,
+        "title":"Product -3 ",
+        "price": 426.93,
+        "rating": 3.0 
+    }
+]
